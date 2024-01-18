@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Linx: Link Shortener',
+  title: 'Lynx: Link Shortener',
   description: 'A simple link shortener',
 }
 
