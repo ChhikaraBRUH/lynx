@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.8.1",
+    "@vercel/kv": "^1.0.1",
     "clsx": "^2.1.0",
     "next": "14.0.4",
     "react": "^18",
