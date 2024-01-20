@@ -8,10 +8,9 @@ export default async function RedirectPage({
   params: { slug: string };
 }) {
   const { slug } = params;
+  const kvSlug = "SLUG_" + slug;
 
-  let cache = await kv.get<string>(slug);
-
-  console.log({ cache });
+  let cache = await kv.get<string>(kvSlug);
 
   if (!cache) {
     const data = await prisma.link.findFirst({
@@ -24,7 +23,7 @@ export default async function RedirectPage({
 
     if (!!url) {
       cache = url;
-      await kv.set(slug, url);
+      await kv.set(kvSlug, url);
     } else {
       notFound();
     }
